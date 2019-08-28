@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh Cuoc Taxi</title>
+</head>
+<body>
+<script>
+    function taxi(n) {
+        let total;
+        if (n == 1){
+            total = 5000;
+        }else if (2 <= n <= 30){
+            total = (n-1)* 4000 + 5000;
+        }else {
+            total = (n - 29)*3000 + 30*4000 + 5000;
+        }
+
+        _div = document.createElement('p');
+        _div.id = 'result';
+        document.body.appendChild(_div);
+        document.getElementById('result').innerText = total+" VND";
+    }
+
+    taxi(prompt('nhap vao so bat ki'))
+</script>
+</body>
+</html>
